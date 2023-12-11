@@ -31,4 +31,19 @@ $(document).ready(() => {
     })
     $("h1").css("text-align", "center");
     $("body").css("background-color", "#ECA");
+
+    $("#textBox").css("width", "180px");
+
+    $("#textBox").on("mouseover", function () { 
+        $("#textBox").css("background-color", "#DC5");
+    });
+    
+    $("#textBox").on("mouseleave", function () { 
+        $("#textBox").css("background-color", "#FFF");
+    });
+
+    $("<button id='btnJquery'>JQuery</button>").appendTo(".contenedor-principal");
+    $("#btnJquery").click(function () { 
+        alert('Creado desde Jquery')
+    });
 })
