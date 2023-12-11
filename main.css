@@ -1,0 +1,16 @@
+body{
+    background-color: #ECA;
+}
+.parrafos{
+    font-size: 12pt;
+    background-color: #ACE;
+}
+button{
+    width: 120px;
+    height: 40px;
+    color: #424;
+    font-size: 12pt;
+    font-weight: bold;
+    background-color: #ACE;
+    margin-left: 20px;
+}
