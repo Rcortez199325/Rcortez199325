@@ -29,4 +29,6 @@ $(document).ready(() => {
         $("#btnMostrar").prop("disabled", false);
         $("#btnOcultar").prop("disabled", true);
     })
+    $("h1").css("text-align", "center");
+    $("body").css("background-color", "#ECA");
 })
