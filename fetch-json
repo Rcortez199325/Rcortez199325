@@ -1,0 +1,66 @@
+const fileData = './data.json';
+fetch(fileData)
+  .then(function(response){
+  if (response.status == 200) {
+    console.log('La respuesta fue con exito!!');
+    //console.log(response);
+    }
+  return response.json();
+  })
+  .then(function(jsonObj){
+  let datos = "";
+  //primero lo hice string para verificar que informacion estaba extrayendo
+  datos = JSON.stringify(jsonObj);
+  console.log(datos);
+  const nuevoArray = JSON.parse(datos); 
+  //Luego de convertirlo a string, lo parse en una nueva constante y me formo el array;
+  //return console.log('Los datos obtenidos son:' + datos + ' | '+  typeof(datos));
+  
+  
+  //en esta parte ya manipule la informacion como un array comun y lo inyecte directo al DOM para visualizar los datos.
+  
+  const _id = document.getElementById('idNumber');
+  const _name = document.getElementById('name');
+  const _lname = document.getElementById('lname');
+  const _phone = document.getElementById('phone');
+  const _remote = document.getElementById('remote');
+  
+  const _idA = document.getElementById('idNumberA');
+  const _nameA = document.getElementById('nameA');
+  const _lnameA = document.getElementById('lnameA');
+  const _phoneA = document.getElementById('phoneA');
+  const _remoteA = document.getElementById('remoteA');
+  
+  const _idB = document.getElementById('idNumberB');
+  const _nameB = document.getElementById('nameB');
+  const _lnameB = document.getElementById('lnameB');
+  const _phoneB = document.getElementById('phoneB');
+  const _remoteB = document.getElementById('remoteB');
+  
+  let objeto0 = nuevoArray[0];
+  _id.innerHTML = `<h4>Este es el ID: ${objeto0.id}</h4>`;
+  _name.innerHTML = `<h4>Este es el nombre: ${objeto0.name}</h4>`;
+  _lname.innerHTML = `<h4>Este es el apellido: ${objeto0.lname}</h4>`;
+  _phone.innerHTML = `<h4>Este es el telefono: ${objeto0.phone}</h4>`;
+  _remote.innerHTML = `<h4>Trabajo Remoto?: ${objeto0.remote}</h4>`;
+  
+  let objeto1 = nuevoArray[1];
+  _idA.innerHTML = `<h4>Este es el ID: ${objeto1.id}</h4>`;
+  _nameA.innerHTML = `<h4>Este es el nombre: ${objeto1.name}</h4>`;
+  _lnameA.innerHTML = `<h4>Este es el apellido: ${objeto1.lname}</h4>`;
+  _phoneA.innerHTML = `<h4>Este es el telefono: ${objeto1.phone}</h4>`;
+  _remoteA.innerHTML = `<h4>Trabajo Remoto?: ${objeto1.remote}</h4>`;
+  
+    let objeto2 = nuevoArray[2];
+  _idB.innerHTML = `<h4>Este es el ID: ${objeto2.id}</h4>`;
+  _nameB.innerHTML = `<h4>Este es el nombre: ${objeto2.name}</h4>`;
+  _lnameB.innerHTML = `<h4>Este es el apellido: ${objeto2.lname}</h4>`;
+  _phoneB.innerHTML = `<h4>Este es el telefono: ${objeto2.phone}</h4>`;
+  _remoteB.innerHTML = `<h4>Trabajo Remoto?: ${objeto2.remote}</h4>`;
+  
+  
+  return nuevoArray;
+  });
+  //.catch((err)=>{
+  //return console.log('el error es: ' + err);
+  //});
