@@ -1,0 +1,23 @@
+[
+  {
+    "id": 10001,
+    "name": "Adrian",
+    "lname": "Cortez",
+    "phone": "656-886-32-19",
+    "remote": true
+  },
+  {
+    "id": 10002,
+    "name": "Ramon",
+    "lname": "Acosta",
+    "phone": "656-886-32-32",
+    "remote": false
+  },
+  {
+    "id": 10003,
+    "name": "Cynthia",
+    "lname": "Valenzuela",
+    "phone": "656-377-75-76",
+    "remote": false
+  }
+]
